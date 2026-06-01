@@ -1,0 +1,28 @@
+# Конфиги с паролями
+config/db.php
+*.env
+
+# Логи
+*.log
+error_log
+
+# Файлы пользователей
+# *.sql
+*.sql.gz
+
+# Папки с загрузками
+images/
+
+# Кеш и временные файлы
+*.tmp
+*.cache
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# XAMPP
+xampp/
