@@ -11,7 +11,7 @@ error_log
 *.sql.gz
 
 # Папки с загрузками
-images/
+# images/
 
 # Кеш и временные файлы
 *.tmp
