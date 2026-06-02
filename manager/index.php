@@ -109,7 +109,11 @@ $shop_id = $shop['id'];
                     $result = mysqli_query($conn, $sql);
                     $revenue = mysqli_fetch_assoc($result);
                     ?>
+                    <?php if($revenue['revenue'] > 0):?>
                     <h3 class="text-3xl font-bold text-purple-800 mt-2">$<?php echo $revenue['revenue']?></h3>
+                    <?php else:?>
+                    <h3 class="text-3xl font-bold text-purple-800 mt-2">$0</h3>
+                    <?php endif;?>
                 </div>
 
                 <div class="bg-white rounded-2xl shadow p-6 border-l-4 border-yellow-400">

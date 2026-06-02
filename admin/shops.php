@@ -187,7 +187,7 @@ if(isset($_POST['DeleteShopBtn'])) {
                     <tbody>
                         <?php foreach($shops as $shop): ?>
                             <tr class = 'border-b hover:bg-yellow-50 transition-colors'>
-                            <td><?php echo $shop['id']?></td>
+                            <td>#<?php echo $shop['id']?></td>
                             <td class='px-6 py-4'> <?php echo $shop['shop_name']?></td>
                             <td> <?php echo $shop['name']. " ". $shop['surname']?></td>
                             <td> <?php echo $shop['category']?></td>

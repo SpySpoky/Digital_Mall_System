@@ -164,7 +164,7 @@ $user_id = $_SESSION['temp_user_id'];
 
         if(mysqli_num_rows($result) > 0) {
             $error = "Email exists!";
-            header("Location: users.php?error=" . urlencode($error));
+            header("Location: users.php");
             exit();
         }
 
@@ -302,7 +302,7 @@ $user_id = $_SESSION['temp_user_id'];
                     <tbody>
                         <?php foreach($users as $user): ?>
                             <tr class = 'border-b hover:bg-yellow-50 transition-colors'>
-                            <td class ='py-3'><?php echo $user['id']?></td>
+                            <td class ='py-3'>#<?php echo $user['id']?></td>
                             <td> <?php echo $user['name']?></td>
                             <td> <?php echo $user['surname']?></td>
                             <td> <?php echo $user['phone']?></td>

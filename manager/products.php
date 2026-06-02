@@ -65,7 +65,7 @@ require_once "../config/db.php";
         $sql = "SELECT p.*, c.name as category_name 
         FROM products p
         left join product_categories c on p.category_id = c.id
-        where 1=1";
+        where p.shop_id = '$shop_id'";
 
         if(!empty($search)) {
             $sql .= " AND p.name like '%$search%'";

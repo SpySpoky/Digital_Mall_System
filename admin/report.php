@@ -120,7 +120,11 @@ $alerts = [
 
             <div class="bg-white rounded-2xl shadow p-6 border-l-4 border-green-500">
                 <p class="text-gray-500 text-sm">Total Revenue</p>
+                <?php if($total_revenue['total_revenue'] > 0):?>
                 <h3 class="text-3xl font-bold text-purple-800 mt-2">$<?php echo $total_revenue['total_revenue']?></h3>
+                <?php else:?>
+                <h3 class="text-3xl font-bold text-purple-800 mt-2">$<?php echo $total_revenue['total_revenue']?></h3>
+                <?php endif?>
             </div>
 
             <div class="bg-white rounded-2xl shadow p-6 border-l-4 border-blue-500">

@@ -43,15 +43,13 @@ if(isset($_GET['SearchBtn'])) {
     $sql = "SELECT o.id as id, u.name as name, u.surname as surname, u.phone as phone, o.shipping_address, o.payment_type, o.total_amount, o.delivery_status, o.delivery_date
     FROM orders o
     left join users1 u on o.customer_id = u.id
-    where courier_id = '$courier_id'
+    where courier_id = '$courier_id' and delivery_status not in('delivered', 'cancelled')
     ORDER BY 
         CASE o.delivery_status
         WHEN 'pending' THEN 1
         WHEN 'assigned' THEN 2
         WHEN 'in_delivery' THEN 3
-        WHEN 'delivered' THEN 4
-        WHEN 'cancelled' THEN 5
-        else 6
+        else 4
         end,
         o.id DESC";
 
@@ -76,8 +74,6 @@ if(isset($_POST['EditOrderBtn'])) {
     header("Location: orders.php");
     exit();
 }
-
-// profile
 
 ?>
 

@@ -19,7 +19,7 @@ if(isset($_GET['SearchBtn'])) {
     from orders o
     left join users1 u on o.customer_id = u.id
     left join users1 c on o.courier_id = c.id
-    where 1=1";
+    where o.shop_id = '$shop_id'";
 
     if(!empty($search)) {
         $sql .= " AND (o.id LIKE '%$search%' OR u.name LIKE '%$search%' OR u.surname LIKE '%$search%')";

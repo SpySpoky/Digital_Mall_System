@@ -161,7 +161,7 @@ $user_id = $_SESSION['temp_user_id'];
                     <tbody>
                         <?php foreach($categories as $category): ?>
                             <tr class="border-b hover:bg-yellow-50 transition-colors">
-                                <td class="py-3"><?php echo $category['id'] ?></td>
+                                <td class="py-3">#<?php echo $category['id'] ?></td>
                                 <td class="py-3"><?php echo $category['name'] ?></td>
                                 <td class="max-w-[250px] truncate"><?php echo $category['description'] ?></td>
                                 <td class="py-3"><?php echo $category['count_shops'] ?></td>

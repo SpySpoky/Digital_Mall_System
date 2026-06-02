@@ -249,7 +249,7 @@ include "role.php";
                 <div class="bg-white rounded-2xl shadow p-6 border-l-4 border-blue-500">
                     <p class="text-gray-500 text-sm">Assigned to Courier</p>
                     <?php 
-                        $sql = "SELECT count(*) as assigned from orders where shop_id = '$shop_id' AND courier_id is not NULL";
+                        $sql = "SELECT count(*) as assigned from orders where shop_id = '$shop_id' AND courier_id is not NULL AND delivery_status = 'assigned'";
                         $result = mysqli_query($conn, $sql);
                         $assigned_stats = mysqli_fetch_assoc($result);
                     ?>
